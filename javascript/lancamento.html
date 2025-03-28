@@ -48,7 +48,7 @@
                             <span class="textprice">Preço Sugerido: R$ 183.850</span>
                         </div>
                         <div>
-                            <img src="img/info.png">
+                            <img id="xl-cabine-info" src="img/info.png">
                         </div>
                     </div>
                 </li>
@@ -63,7 +63,7 @@
                             <span class="textprice">Preço Sugerido: R$ 220.690</span>
                         </div>
                         <div>
-                            <img src="img/info.png">
+                            <img id="xls-diesel-info" src="img/info.png">
                         </div>
                     </div>
                 </li>
@@ -78,7 +78,7 @@
                             <span class="textprice">Preço Sugerido: R$ 222.790</span>
                         </div>
                         <div>
-                            <img src="img/info.png">
+                            <img id="storm-info" src="img/info.png">
                         </div>
                     </div>
                 </li>
@@ -165,6 +165,55 @@
         <div style="text-align: center;padding-bottom: 20px;">
             <button type="button" style="height: 40px; width: 200px;" onclick="HideCompare()">Fechar</button>
         </div> 
-    </div>   
+    </div>  
+    
+    <div id="car-popup-info" class="car-popup-info">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <img id="popupCarImage" src="" class="car-info-img">
+            <table class="car-info-table">
+                <tr>
+                    <td><strong>Modelo:</strong></td>
+                    <td id="popupCarModel"></td>
+                </tr>
+                <tr>
+                    <td><strong>Preço:</strong></td>
+                    <td id="popupCarPrice"></td>
+                </tr>
+                <tr>
+                    <td><strong>Altura da caçamba (mm):</strong></td>
+                    <td id="popupCarAlturaCacamba"></td>
+                </tr>
+                <tr>
+                    <td><strong>Altura do veículo (mm):</strong></td>
+                    <td id="popupCarAlturaVeiculo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Altura livre do solo (mm):</strong></td>
+                    <td id="popupCarAlturaSolo"></td>
+                </tr>
+                <tr>
+                    <td><strong>Capacidade de carga (Kg):</strong></td>
+                    <td id="popupCarCapacidadeCarga"></td>
+                </tr>
+                <tr>
+                    <td><strong>Motor:</strong></td>
+                    <td id="popupCarMotor"></td>
+                </tr>
+                <tr>
+                    <td><strong>Potência (cv):</strong></td>
+                    <td id="popupCarPotencia"></td>
+                </tr>
+                <tr>
+                    <td><strong>Volume de caçamba (L):</strong></td>
+                    <td id="popupCarVolumeCacamba"></td>
+                </tr>
+                <tr>
+                    <td><strong>Roda:</strong></td>
+                    <td id="popupCarRoda"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
