@@ -13,7 +13,8 @@ class contato {
 }
 
 function Post(form) {
-
+    event.preventDefault();
+ 
   let data = new contato(form.elements.namedItem("nome").value,
             form.elements.namedItem("sobrenome").value, 
             form.elements.namedItem("email").value, 
@@ -21,19 +22,27 @@ function Post(form) {
             form.elements.namedItem("telefone").value, 
             form.elements.namedItem("contato").value);
           
-            Enviar();
-          
-            setTimeout(() => form.reset(), 0);
-
-         
+            Enviar(data);    
+           form.reset();
 }
 
-function Enviar() {
+function Enviar(data) {
 
-    var nome = document.getElementById("nomeid");
-
-    if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
-    }
-
+    if (data && data.nome){
+        if(data.email.includes('@') && data.email.includes('.'))  {
+        alert('Obrigado sr(a) ' + data.nome +" "+ data.sobrenome+' os seus dados foram encaminhados com sucesso');
+        console.log("Dados enviados com sucesso:", {
+            nome: data.nome,
+            sobrenome: data.sobrenome,
+            email: data.email,
+            cpf: data.cpf,
+            telefone: data.telefone,
+            tipoContato: data.tipoContato
+})}else{
+    alert('Insira um email válido')
+return} }
+else{
+    console.error("Falha no envio: dados incompletos ou inválidos", data);
+return
+}
 }

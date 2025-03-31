@@ -35,6 +35,15 @@ main div {
     display: block;
     text-align: center;
 }
+form button{
+border: solid 3px #1b357e;
+transition-duration: 0.3s;
+}
+form button:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    border: solid 3px #1351d8;
+}
 
 h2 {
     text-align: left;
