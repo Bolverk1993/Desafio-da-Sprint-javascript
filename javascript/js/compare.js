@@ -99,18 +99,19 @@ function showCarInfo(car) {
     document.getElementById('popupCarVolumeCacamba').textContent = car.volumeCacamba;
     document.getElementById('popupCarRoda').textContent = car.roda;
 
-    document.getElementById('carPopup').style.display = 'flex';
+    document.getElementById('car-popup-info').style.display = 'flex';
 }
 
 // Fechar popup quando clicar no X
-document.querySelector('.close-popup').addEventListener('click', function () {
-    document.getElementById('carPopup').style.display = 'none';
-});
+
+    function fecharpopup(){
+        document.getElementById('car-popup-info').style.display = 'none';
+    };
 
 // Fechar popup quando clicar fora do conteúdo
 window.addEventListener('click', function (event) {
-    if (event.target === document.getElementById('carPopup')) {
-        document.getElementById('carPopup').style.display = 'none';
+    if (event.target === document.getElementById('car-popup-info')) {
+        document.getElementById('car-popup-info').style.display = 'none';
     }
 });
 
