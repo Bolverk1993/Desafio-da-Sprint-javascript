@@ -76,6 +76,14 @@
 }
 } 
 
+@media (max-width: 343px) {
+    footer ul,li,img {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        gap: 0px;
+}
+}
 
 /* lancamento */
 
@@ -177,17 +185,5 @@
         min-height: 300px;
         left: 0vw;
         transform: scale(65%);
-}
-}
-/* contato */
-
-@media (max-width: 1440px) {
-    div.forms {
-        height: 200vh;
-        max-width: 40%;
-         max-height: 610px;
-        min-height: 200px;
-        margin: 0 auto;
-        transform: translate(-50%, -50%);
 }
 }
