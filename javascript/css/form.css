@@ -35,6 +35,19 @@ main div {
     display: block;
     text-align: center;
 }
+
+#LGPD{
+width: 310px;
+color: #807d7d;
+font-size: 10px;
+text-align: start;
+
+}
+#LGPD input:hover{
+    opacity: 0.5;
+    color: #1b357e;
+}
+
 form button{
 border: solid 3px #1b357e;
 transition-duration: 0.3s;

@@ -14,6 +14,12 @@ class contato {
 function Post(form) {
     event.preventDefault();
  
+    const checkboxTermos = document.getElementById('termos');
+    if (!checkboxTermos.checked) {
+        alert("Você deve aceitar os Termos e Condições para continuar!");
+        return false;
+    }
+
   let data = new contato(form.elements.namedItem("nome").value,
             form.elements.namedItem("sobrenome").value, 
             form.elements.namedItem("email").value, 
@@ -26,7 +32,6 @@ function Post(form) {
 }
 
 function Enviar(data) {
-
     if (data && data.nome){
         if(data.email.includes('@') && data.email.includes('.'))  {
         alert('Obrigado sr(a) ' + data.nome +" "+ data.sobrenome+' os seus dados foram encaminhados com sucesso');
